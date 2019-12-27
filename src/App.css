@@ -2,37 +2,155 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.NavBar{
+  height: 100px;
+  width: 100%;
+  position: relative;
+  background-color: #87AFD4;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.container{
+  width: 970px;
+  height: 100%;
+  margin:0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.logo{
+  float: left;
+  height: 100px;
+  width: 15%;
+  display:table;
+}
+.logo a {
+  height: 90px;
+  display:table-cell;
+  vertical-align: middle;
+}
+.logoImg{
+  height: 90px;
+  display:table-cell;
+  vertical-align: middle;
+  margin:0 auto;
+}
+/*****Menu*****/
+.menu{
+  float: left;
+  width: 75%;
+  height: 100%;
+  display:table;
 }
 
-.App-link {
-  color: #61dafb;
+.menuContainer{
+  height: 100%;
+  display:table-cell;
+  vertical-align: middle;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.menuContainer2{
+  display: inline-block;
+}
+
+
+.parentMenu{
+  height: 100px;
+  display: inline-block;
+}
+
+.menuHasChild .menuBtn::after{
+  font-family: "FontAwesome";
+    content: " \f107";
+}
+
+.parentMenu:hover > .subMenu_inner{
+  visibility: visible;
+  opacity: 1;
+  top: 100%;
+}
+.menuBtn{
+  height: 100px;
+  color: #ffffff;
+  padding: 0 14px !important;
+  display:table-cell;
+  vertical-align: middle;
+  text-decoration: none;
+}
+
+/*****sub menu*****/
+.subMenu_inner{
+  width: 200px;
+  display: block;
+  position: absolute;
+  background: #666666;
+  top: 60px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.subMenuContainer{
+  padding:20px;
+}
+.subMenuContainer  li{
+  list-style: none;
+  text-align: left;
+  line-height: 20px;
+}
+
+
+.subMenuContainer .subMenu .subBtn{
+  width:100%;
+  padding: 10px 0 10px 5px;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  transition: all 400ms ease;
+}
+
+.subBtn:hover{
+  background:#87AFD4;
+}
+.subHasChild .subBtn::after{
+  font-family: "FontAwesome";
+  content: " \f105";
+}
+
+.subMenu:hover > .subSubMenu_inner{
+  visibility: visible;
+  opacity: 1;
+}
+
+/*****Sub Sub Menu*****/
+.subSubMenu_inner{
+  width: 200px;
+  display: block;
+  position: absolute;
+  background: #666666;
+  margin-left: 15px;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 500ms ease;
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
+}
+
+.subSubMenuContainer{
+  padding:20px;
+}
+
+.subSubMenuContainer .subSubMenu .subSubBtn{
+  width:100%;
+  padding: 5px 0 5px 5px;
+  color: #ffffff;
+  display: block;
+  text-decoration: none;
+  transition: all 400ms ease;
+}
+
+.subSubBtn:hover{
+  margin-left: 7px;
+}
+
+.subSubBtn::before{
+  font-family: "FontAwesome";
+  content: "\f0da\ ";
 }
