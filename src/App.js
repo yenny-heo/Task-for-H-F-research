@@ -10,7 +10,12 @@ class App extends React.Component {
       {
         name: "Pizza", link: "/",
         subMenu: [
-          { name: "Bulgogi", link: "/", },
+          { name: "Bulgogi", link: "/",
+          subMenu: [
+            { name: "Review", link: "/" },
+            { name: "Price", link: "/" },
+          ]
+        },
           {
             name: "Combo", link: "/",
             subMenu: [

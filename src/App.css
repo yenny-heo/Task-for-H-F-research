@@ -1,3 +1,7 @@
+:root {
+  --nav-color: #F4B251;
+}
+
 .App {
   text-align: center;
 }
@@ -6,7 +10,7 @@
   height: 100px;
   width: 100%;
   position: relative;
-  background-color: #87AFD4;
+  background-color: var(--nav-color);
 }
 
 .container{
@@ -108,11 +112,12 @@
 }
 
 .subBtn:hover{
-  background:#87AFD4;
+  background:var(--nav-color);
 }
 .subHasChild .subBtn::after{
   font-family: "FontAwesome";
   content: " \f105";
+  float: right;
 }
 
 .subMenu:hover > .subSubMenu_inner{
