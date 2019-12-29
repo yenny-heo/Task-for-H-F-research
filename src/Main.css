@@ -1,0 +1,36 @@
+.MainImg{
+    width: 90%;
+    min-width: 768px;
+    max-width: 1170px;
+}
+
+.Title1{
+    color: rgba(66, 63, 64, 1);
+    margin-top: 40px;
+}
+
+h2{
+    font-size: 30px;
+    font-weight: 900 !important;
+}
+
+/********News*********/
+
+.NewsContainer2{
+    display: inline-block;
+    width: 25%;
+}
+
+.NewsImg{
+    display: block;
+    width: 100% !important;
+    height: auto !important;
+}
+
+.NewsTitle{
+    display: block;
+}
+
+.NewsBtn{
+    display: block;
+}
