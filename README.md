@@ -1,20 +1,33 @@
-# Task 2
+# Task for Hackers/Founders
 
 ## How to start
 
 ```
+$ npm install
 $ npm start
 ```
 
-## Code Description
+## Architecture
 
 ### App.js
+
+**: Including Top navigation bar & Main page**
+
+### App.css
+
+- Variable
+
+> --nav-color: Navigation bar color
+
+### NavBar.js
+
+**: Top navigation bar**
 
 - class App
 
 > - state: Menu Lists
 >
-> ```
+> ```javascript
 > state = {
 >     menu: [
 >       {
@@ -43,27 +56,64 @@ $ npm start
 >
 > 
 >
-> return menu
+> Return menu.
 
 - class Menu
 
-> If Sub menu is exist, return sub menu.
+> If Sub menu is exist, Return sub menu.
 >
-> If not, return menu.
+> If not, Only return menu.
 
 - class SubMenu
 
-> If sub sub menu is exist, return sub sub menu.
+> If sub sub menu is exist, Return sub sub menu.
 >
-> If not, return sub menu.
+> If not, Only return sub menu.
 
-### App.css
+### Main.js
 
-- Variable
+**: Main page**
 
-> --nav-color: Navigation bar color
+- Class Main
 
+> - State: News Lists (4 news)
+>
+> ```javascript
+> state = {
+>         news: [
+>             {
+>                 img: "News Image Link",
+>                 title: "News Title",
+>                 link: "/"
+>             },
+>             {
+>                 img: "News Image Link",
+>                 title: "News Title",
+>                 link: "/"
+>             },
+>             {
+>                 img: "News Image Link",
+>                 title: "News Title",
+>                 link: "/"
+>             },
+>             {
+>                 img: "News Image Link",
+>                 title: "News Title",
+>                 link: "/"
+>             }
+>         ]
+>     }
+> ```
+>
+> Put News title, link and Image link at "news" array.
+>
+>  
+>
+> Return Main Image and News.
 
+- Class News
+
+> Return 4 News.
 
 ### index.html
 

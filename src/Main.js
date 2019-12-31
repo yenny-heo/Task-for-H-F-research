@@ -6,22 +6,22 @@ class Main extends React.Component {
         news: [
             {
                 img: "./img1.jpg",
-                title: "Hello??",
+                title: "Los beneficios del Customer-Centric: Amazon y su enfoque en los clientes",
                 link: "/"
             },
             {
                 img: "./img1.jpg",
-                title: "Hello??",
+                title: "Los beneficios del Customer-Centric: Amazon y su enfoque en los clientes",
                 link: "/"
             },
             {
                 img: "./img1.jpg",
-                title: "Hello??",
+                title: "Los beneficios del Customer-Centric: Amazon y su enfoque en los clientes",
                 link: "/"
             },
             {
                 img: "./img1.jpg",
-                title: "Hello??",
+                title: "Los beneficios del Customer-Centric: Amazon y su enfoque en los clientes",
                 link: "/"
             }
         ]
@@ -43,11 +43,13 @@ class News extends React.Component {
         return (
             this.props.news.map((news, i) => {
                 return (
-                <div className="NewsContainer2" key={i}>
-                    <img className="NewsImg" src={news.img}></img>
-                    <a className="NewsTitle" href={news.link}>{news.title}</a>
-                    <a className="NewsBtn" href={news.link}>Read More ...</a>
-                </div>);
+                    <div className="NewsContainer2" key={i}>
+                        <img className="NewsImg" src={news.img}></img>
+                        <a className="NewsTitle" href={news.link}>{news.title}</a>
+                        <p align="left">
+                            <a className="NewsBtn" href={news.link}>Read More ...</a>
+                        </p>
+                    </div>);
             })
         );
     }
